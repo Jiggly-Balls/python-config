@@ -93,7 +93,7 @@ In basedpyright, all type checking rules are enabled by default. These are the o
 
 ### Tips
 
-I personally prefer to use `uv run` for running these tools, which means I also need to add them to my environment before running which I don't mind.
+I personally prefer to use `uv run` for running these tools, which means I also need to add them to my environment before running, which I don't mind.
 
 Others recommend using `uvx` or `uv tool run` for running CLI tools. If you don't want to have separate dev dependancies for formatting/linting/type checking,
 you can use the other method.
