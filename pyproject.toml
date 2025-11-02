@@ -7,7 +7,44 @@ requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
-dev = [
-    "basedpyright>=1.32.1",
-    "ruff>=0.14.3",
+dev = ["basedpyright>=1.32.1", "ruff>=0.14.3"]
+
+[tool.ruff]
+line-length = 79
+lint.extend-select = ["ANN", "I"]
+lint.ignore = ["ANN401", "F"]
+lint.fixable = ["I", "F401"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+docstring-code-line-length = 72
+
+
+[tool.basedpyright]
+exclude = [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.*",
+    "venv/",
+    "build/",
+    "dist/",
+    "local/",
+    "examples/",
+    "docs/",
+    "lib_testing/",
 ]
+reportImportCycles = false
+reportUnnecessaryIsInstance = false
+reportImplicitStringConcatenation = false
+reportUnusedCallResult = false
+reportMissingTypeStubs = false
+reportAssignmentType = false
+reportRedeclaration = false
+reportAny = false
+reportExplicitAny = false
+reportUnknownVariableType = false
+reportImplicitOverride = false
+reportUnusedParameter = false
+reportDeprecated = false
