@@ -12,7 +12,7 @@ dev = ["basedpyright>=1.32.1", "ruff>=0.14.3"]
 [tool.ruff]
 line-length = 79
 lint.extend-select = ["ANN", "I"]
-lint.ignore = ["ANN401", "F"]
+lint.ignore = ["ANN401"]
 lint.fixable = ["I", "F401"]
 
 [tool.ruff.format]
@@ -39,11 +39,7 @@ reportUnnecessaryIsInstance = false
 reportImplicitStringConcatenation = false
 reportUnusedCallResult = false
 reportMissingTypeStubs = false
-reportAssignmentType = false
-reportRedeclaration = false
 reportAny = false
 reportExplicitAny = false
-reportUnknownVariableType = false
 reportImplicitOverride = false
-reportUnusedParameter = false
 reportDeprecated = false
